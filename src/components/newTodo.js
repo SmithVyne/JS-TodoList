@@ -4,6 +4,7 @@ import { renderProjects } from '../utils';
 
 const newTodoUtils = (index) => {
   const allProjects = JSON.parse(localStorage.getItem('allProjects'));
+
   const todoTitle = document.querySelector(`#todoTitle${index}`);
   const description = document.querySelector(`#description${index}`);
   const dueDate = document.querySelector(`#dueDate${index}`);
