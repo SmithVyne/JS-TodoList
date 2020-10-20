@@ -26,7 +26,7 @@ const dummyProject = {
   ],
 };
 
-const allProjects = [dummyProject, dummyProject];
+const allProjects = [dummyProject];
 
 const renderProjects = () => {
   const projects = JSON.parse(localStorage.getItem('allProjects'));
@@ -40,6 +40,33 @@ const renderProjects = () => {
   }
 };
 
+const isValidTodo = todo => {
+  const errors = [];
+
+  if (todo.title === ('' || ' ')) {
+    errors.push('Title is Required');
+  } else if (todo.description === ('' || ' ')) {
+    errors.push('Description is Required');
+  } else if (todo.dueDate === ('' || ' ')) {
+    errors.push('Due date is Required');
+  } else if (todo.priority === ('' || ' ')) {
+    errors.push('Priority is Required');
+  }
+
+  return errors.length <= 0;
+};
+
+const isValidProject = proj => {
+  const errors = [];
+
+  if (!proj.name) {
+    errors.push('Project Name is Required');
+  }
+
+  return errors.length <= 0;
+};
+
 export {
   allProjects, renderProjects,
+  isValidTodo, isValidProject,
 };
