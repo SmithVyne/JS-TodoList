@@ -28,7 +28,7 @@ Follow the steps below to test the project locally. First ensure you have a vers
 To run the unit tests,;
 1. We need two terminal windows, one to run the tests and the other to serve the project in a browser because the UI tester Puppeteer needs an endpoint to connect to. Puppeteer preferably works best with chrome but also has support for firefox.
 2. On the first terminal, run `npm run start` to serve the project live on `http://localhost:9000`
-3. On the second terminal, run `npm run test` run both the UI and other unit tests.
+3. On the second terminal, run `npm run test` to run both the UI and other unit tests.
 
 
 ## Authors
