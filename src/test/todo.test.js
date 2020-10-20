@@ -1,6 +1,6 @@
-import Todo from '../Todo'
-import { isValidTodo } from '../utils'
-import renderPriorityText from '../renderPriorityText'
+import Todo from '../Todo';
+import { isValidTodo } from '../utils';
+import renderPriorityText from '../renderPriorityText';
 
 const newTodo = new Todo('push ups', 'Need to give my cardio a nice boost', '2020-12-16', 1);
 
@@ -11,7 +11,7 @@ test('Should be able to create a new Todo instance', () => {
     title: 'push ups',
     description: 'Need to give my cardio a nice boost',
     dueDate: '2020-12-16',
-    priority: 1
+    priority: 1,
   });
 });
 

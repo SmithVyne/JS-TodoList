@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open --hot",
     "eslint": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js",
-    "eslint-fix": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js ./webpack.config.js --fix",
+    "eslint-fix": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js ./src/test/**.*js ./webpack.config.js ./jest.config.js --fix",
     "stylelint": "npx stylelint **/*.{css,scss}",
     "stylelint-fix": "npx stylelint **/*.{css,scss} --fix"
   },
