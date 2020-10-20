@@ -12,6 +12,8 @@ This is a todo list app built with JavaScript, bootstrap, HTML/CSS and Webpack. 
   - Javascript
   - HTML
   - CSS
+  - Jest
+  - Puppeteer
 
 ## Installation
 Follow the steps below to test the project locally. First ensure you have a version of [Node.js](http://nodejs.org/) equal or greater than v6.10.0 installed.
@@ -21,6 +23,12 @@ Follow the steps below to test the project locally. First ensure you have a vers
 3. Install project dependencies `npm install`
 4. Run `npm run dev` to compile a development build.
 5. Run `npm run start` to serve the project live on `http://localhost:9000` and voila!!!.
+
+## Unit Tests
+To run the unit tests,;
+1. We need two terminal windows, one to run the tests and the other to serve the project in a browser because the UI tester Puppeteer needs an endpoint to connect to. Puppeteer preferably works best with chrome but also has support for firefox.
+2. On the first terminal, run `npm run start` to serve the project live on `http://localhost:9000`
+3. On the second terminal, run `npm run test` to run both the UI and other unit tests.
 
 
 ## Authors

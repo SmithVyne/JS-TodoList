@@ -1,17 +1,6 @@
+import renderPriorityText from './renderPriorityText';
 import '../css/styles.css';
 
-const renderPriorityText = (int) => {
-  switch (int) {
-    case 1:
-      return 'Low';
-    case 2:
-      return 'Medium';
-    case 3:
-      return 'High';
-    default:
-      return 'High';
-  }
-};
 const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
   todosAccord.innerHTML += `
   <div class="card">

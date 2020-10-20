@@ -1,9 +1,10 @@
 import { format } from 'date-fns';
 import Todo from '../Todo';
-import { renderProjects } from '../utils';
+import { renderProjects, isValidTodo } from '../utils';
 
 const newTodoUtils = (index) => {
   const allProjects = JSON.parse(localStorage.getItem('allProjects'));
+
   const todoTitle = document.querySelector(`#todoTitle${index}`);
   const description = document.querySelector(`#description${index}`);
   const dueDate = document.querySelector(`#dueDate${index}`);
@@ -25,7 +26,10 @@ const createTodo = () => {
       const prInt = parseInt(priority.value, 10);
 
       const newTodo = new Todo(todoTitle.value, description.value, formatedDate, prInt);
-      allProjects[index].list.push(newTodo);
+
+      if (isValidTodo(newTodo)) {
+        allProjects[index].list.push(newTodo);
+      }
 
       localStorage.setItem('allProjects', JSON.stringify(allProjects));
 
