@@ -21,7 +21,7 @@ test('New Project inputfield: Should return registered project name', async () =
   const val = await page.$eval('input#projectTitle', input => input.value);
 
   expect(val).toBe('Adding Test Project');
-}, 14000);
+}, 18000);
 
 test('Project Acordion parent: Should be rendered on the page', async () => {
   const browser = await puppeteer.launch();
